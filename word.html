@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Word game </title>
+    <link rel="stylesheet" type="text/css" href="Css/word.css">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="jpg/ico.png" />
+    <script src="https://kit.fontawesome.com/d640963a70.js" crossorigin="anonymous"></script>
+</head>
+<div style="margin-top: 20px;">
+    <a href="index.html " style="text-decoration: none; background-color: mediumaquamarine;
+     padding:10px;  border-radius: 5px; color: white ; ">Go Home</a>
+</div>
+
+<body style="overflow: hidden;">
+    <div id="body">
+        <div id="fusDiv">
+            <img id="fusee" src="jpg/fuse2.png" style="width: 150px; height: 250px">
+        </div>
+        <div class="wrapper" id="wrapper">
+            <div class="box box35" id="box35">
+                <div id="winnerDiv">
+                    <button onclick="fullScreen()" id="fullscreen">Full <br> screen</button>
+                    <p id="winner"> </p>
+                </div>
+                <img src="" id="pix">
+                <button onclick="reset()" id="rejouer">Replay</button>
+            </div>
+            <div class="box box5 " style="background: wheat">
+                <input readonly type="text" name="pren" id="prenom" autocomplete="off" disabled="" maxlength="12">
+                <button class="play" id="play1" class="action "><i class="fa-solid fa-volume-high"></i></button>
+            </div>
+            <div id="keyboard">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript " src="Js/word.js"></script>
+</body>
+
+
+</html>

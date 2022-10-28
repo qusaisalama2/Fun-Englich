@@ -1,0 +1,701 @@
+@keyframes rotatex {
+    from {
+        opacity: 0;
+        transform: scale3d(0, 1, 0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+#winner {
+    animation-name: rotatex;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+#winner:nth-child(2) {
+    color: gold;
+
+}
+
+.lettreBlinkFin {
+    text-decoration: blink;
+    color: #372948;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 800;
+    background-color: sandybrown;
+    /*animation-name: blinker;*/
+    animation-name: zoomIn;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+#winner {
+    color: black;
+    font-size: small;
+}
+
+
+@keyframes decollage {
+    from {}
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(0, -900px);
+    }
+}
+
+.decollage {
+    animation-name: decollage;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(1, 0, 0.2, 1);
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+}
+
+.fadeIn {
+    animation-name: fadeOut;
+    animation-direction: reverse;
+    animation-duration: 1s;
+    grid-area: 1/2/3/3;
+}
+
+@keyframes flash {
+
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes fermeture {
+    to {
+        width: 0;
+    }
+}
+
+.fermeture {
+    animation-name: fermeture;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.flash {
+    animation-name: flash;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+@keyframes blinker {
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0.0;
+    }
+}
+
+.lettreBlink {
+    text-decoration: blink;
+    color: red;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 800;
+    background-color: sandybrown;
+    /*animation-name: blinker;*/
+    animation-name: zoomIn;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+
+
+@keyframes rotateIn {
+    from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 0, 0);
+        opacity: 0.5;
+    }
+
+    to {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, 360deg);
+        opacity: 1;
+        background-color: rosybrown;
+    }
+}
+
+.rotateIn {
+    animation-name: rotateIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotateIn2 {
+    from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 0, 0);
+        opacity: 1;
+    }
+
+    100% {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, 360deg);
+        opacity: 1;
+        background-color: rosybrown;
+    }
+
+}
+
+@keyframes translate2 {
+    0% {
+        position: relative;
+        left: 0px;
+        top: 0px;
+    }
+
+    50% {
+        position: relative;
+        left: 250px;
+        top: 0px;
+    }
+
+    100% {
+        position: relative;
+        left: 500px;
+        top: 0px;
+    }
+}
+
+.rotateIn2 {
+    animation-name: rotateIn2;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shake {
+
+    from,
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translate3d(5px, 0, 0);
+    }
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: .7s;
+}
+
+
+.translate2 {
+    animation: translate2 1s linear infinite alternate;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale3d(0.8, 0.8, 0.8);
+    }
+
+    50% {}
+}
+
+
+
+html {
+    margin: 0vh;
+    padding: 0vh;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #CDFCF6;
+    background-repeat: none;
+    font-family: "Arial", "Montserrat", "Avenir";
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0;
+}
+
+#body {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 5fr;
+    height: 100%
+}
+
+.wrapper {
+    grid-gap: 0em;
+    padding: 0em;
+    margin: 0px;
+    width: 80vw;
+    display: grid;
+    align-items: center;
+}
+
+
+.box1 {
+    align-self: center;
+}
+
+.box2 {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+.box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.box35 {
+    display: flex;
+    font-size: 80px;
+    color: gray;
+    font-weight: 700;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.box5 {
+    display: grid;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 5px 10vw 5px 1vw;
+    border-radius: 10px;
+    grid-template-columns: 5fr 1fr;
+}
+
+
+.box7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 0em;
+    padding: 0em;
+    margin: 0px;
+}
+
+#keyboard {
+    grid-gap: 0em;
+    padding: 0em;
+    /* margin-right: 5vw; */
+    margin-bottom: 5vh;
+}
+
+
+
+button {
+
+    font-size: 4vw;
+    border-radius: 5px;
+    background:
+        #eae;
+    width: 9.5vw;
+    margin: 2px;
+    transition: .3s;
+}
+
+#fullscreen {
+    height: 9vh;
+    /*width: 35px;*/
+    background-color: #98A8F8;
+    text-align: center;
+    margin: 0;
+    border-color: #98A8F8;
+    /*border-style: none;*/
+    border-width: 1px;
+    font-size: 1.5vw;
+    width: 8vw;
+    margin-top: 2vh
+}
+
+#rejouer {
+    background-color: #98A8F8;
+    border-color: #98A8F8;
+    height: 50px;
+    font-size: 1.5vw;
+    width: 9vw;
+    position: relative;
+    margin-top: 2vh
+}
+
+
+#menuBoutons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+input {
+    font-style: normal;
+    font-size: 4vw;
+    border: none;
+    border-radius: 10px;
+
+}
+
+input[type="text"] {}
+
+
+
+
+
+
+#fusDiv {
+    position: relative;
+    display: grid;
+    align-items: center;
+    margin-left: 2vw;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+
+}
+
+#fusee {
+    height: 80vh;
+    z-index: -1;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+}
+
+@media (max-width: 768px) {
+    #fusee {
+        display: none;
+    }
+}
+
+#reservoir {
+    height: 100%;
+    width: 3.5vh;
+    background-color: grey;
+    border-radius: 5px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+#fuel {
+    position: absolute;
+    left: 11vh;
+    top: 30vh;
+    height: 25vh;
+    width: 3.5vh;
+    background-color: blue;
+    border-radius: 5px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+
+
+
+#loginName {
+    text-align: center;
+    font-size: 20px;
+}
+
+#pix {
+    margin-top: 3vh;
+    border: solid black;
+    height: 30vh;
+    border-radius: 20px;
+    z-index: -1;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-drag: none;
+    -khtml-user-drag: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+.play {
+    background-color: #FFECEF;
+
+}
+
+#play1 {
+    min-width: 50px;
+    height: 85%;
+}
+
+#prenom {
+    align-self: center;
+}
+
+#rectangle {}
+
+
+
+
+#retour {
+    background: mediumturquoise;
+    font-size: 15px;
+    min-width: 8px;
+}
+
+
+#score {
+    color: white;
+    background-color: dodgerblue;
+}
+
+#smiley {
+    border-radius: 10px;
+}
+
+.smiley {
+    border-radius: 2vw;
+    height: 4vw;
+
+
+}
+
+#sub {
+    border: 2px solid darkgrey;
+    background-color: chartreuse;
+    color: white
+}
+
+
+@media screen and (orientation: portrait) {
+
+    html {
+        display: flex;
+        justify-content: center;
+    }
+
+    body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #body {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 30% auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-rows-gap: 0;
+    }
+
+    button {
+        font-size: 4vh;
+        border-radius: 10px;
+        background:
+            #eae;
+        width: 6vh;
+        margin: 2px;
+    }
+
+    input {
+        font-style: normal;
+        font-size: 3vh;
+        max-width: 50vw;
+        border: none;
+        border-radius: 20px;
+
+    }
+
+    #menuBoutons {}
+
+    #fullscreen {
+        position: relative;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        font-size: 1.5vw;
+        width: 9vw;
+        height: 5vh;
+    }
+
+    #rejouer {
+        grid-row: 1/2;
+        font-size: 1.5vw;
+        width: 10vw;
+        height: 5vh;
+    }
+
+
+
+    #fusee {
+        display: none;
+    }
+
+    #fusDiv {
+        position: relative;
+        grid-row: 1/2;
+        grid-column: 2/3;
+        justify-self: center;
+        align-self: end;
+        padding: 0;
+        left: 0;
+        top: 10vh;
+        margin: 0;
+    }
+
+
+
+    #reservoir {
+        height: 10vh;
+        width: 1.5vh;
+        background-color: grey;
+        border-radius: 5px;
+    }
+
+    #fuel {
+        position: absolute;
+        left: 4vh;
+        top: 7vh;
+        height: 10vh;
+        width: 1.5vh;
+        background-color: blue;
+        border-radius: 5px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    #wrapper {
+        grid-row: 2/3;
+        grid-column: 1/4;
+        height: 100%;
+    }
+
+
+
+    #rectangle {}
+
+    #pix {
+        height: 20vh;
+    }
+
+    .smiley {
+        border-radius: 2vh;
+        height: 4vh;
+    }
+
+
+    #dessin {
+        position: absolute;
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(184, 190, 184, 0.267);
+        width: 100%;
+    }
+
+    .header>* {
+        display: flex;
+        margin: 15px;
+        align-items: center;
+    }
+
+    input {
+        cursor: pointer;
+        padding: 1px 1px;
+        border-radius: 3px;
+
+    }
+
+    #lineColor {
+        margin: 0;
+    }
+}
